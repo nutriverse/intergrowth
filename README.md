@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools
+# intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools <img src="man/figures/intergrowth.png" width="200px" align="right" />
 
 <!-- badges: start -->
 
