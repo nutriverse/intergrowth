@@ -28,6 +28,6 @@ and femur length based on ultrasound
 }
 \examples{
 
-calculate_gestage(date = "2016-12-23", crl = 17)
+calculate_gestage(date = "2016-23-12", crl = 17)
 
 }
