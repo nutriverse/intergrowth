@@ -12,7 +12,7 @@
 #' }
 #'
 #' @examples
-#' gest_age_crl
+#' gestage_crl
 #'
 #' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
 #'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
@@ -20,4 +20,56 @@
 #'
 #
 ################################################################################
-"gest_age_crl"
+"gestage_crl"
+
+
+################################################################################
+#
+#' International fetal size standards in early pregnancy: table of centiles of
+#' crown-rump length based on gestation age in weeks and days
+#'
+#' @format A tibble with 336 rows and 4 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age - weeks}
+#'   \item{\code{day}}{Gestation age - days}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{crl}}{Crown-rump length in millimetres}
+#' }
+#'
+#' @examples
+#' crl_gestage_centiles
+#'
+#' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
+#'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
+#'     systematic review of charts. BJOG 2014, 121(5):556-5.
+#'
+#
+################################################################################
+"crl_gestage_centiles"
+
+
+################################################################################
+#
+#' International fetal size standards in early pregnancy: table of z-scores of
+#' crown-rump length based on gestation age in weeks and days
+#'
+#' @format A tibble with 336 rows and 4 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age - weeks}
+#'   \item{\code{day}}{Gestation age - days}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{crl}}{Crown-rump length in millimetres}
+#' }
+#'
+#' @examples
+#' crl_gestage_sd
+#'
+#' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
+#'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
+#'     systematic review of charts. BJOG 2014, 121(5):556-5.
+#'
+#
+################################################################################
+"crl_gestage_sd"
+
+
