@@ -5,6 +5,12 @@
 
 <!-- badges: start -->
 
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Travis build
+status](https://travis-ci.org/nutriverse/intergrowth.svg?branch=master)](https://travis-ci.org/nutriverse/intergrowth)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/nutriverse/intergrowth?branch=master&svg=true)](https://ci.appveyor.com/project/nutriverse/intergrowth)
 <!-- badges: end -->
 
 The INTERGROWTH-21st Project was a multi-centre, multi-ethnic,
@@ -34,6 +40,6 @@ install.packages("intergrowth")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("nutriverse/intergrowth")
+if(!require(remotes)) install.packages("remotes")
+remotes::install_github("nutriverse/intergrowth")
 ```
