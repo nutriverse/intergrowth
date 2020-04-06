@@ -12,8 +12,7 @@
 #'
 #' @examples
 #'
-#' calculate_gestage(date = "2016-23-12",
-#'                   crl = 17)
+#' calculate_gestage(date = "2016-23-12", crl = 17)
 #'
 #' @export
 #'
@@ -67,7 +66,7 @@ calculate_gestage_crl <- function(date = Sys.Date(),
 #'
 #' @examples
 #'
-#' calculate_gestage_hcfl(date = "2016-12-23", hc = 130, fl = 20)
+#' calculate_gestage_hcfl(date = "2016-23-12", hc = 130, fl = 20)
 #'
 #' @export
 #'
@@ -126,7 +125,7 @@ calculate_gestage_hcfl <- function(date = Sys.Date(),
 #'
 #' @examples
 #'
-#' calculate_gestage(date = "2016-12-23", crl = 17)
+#' calculate_gestage(date = "2016-23-12", crl = 17)
 #'
 #' @export
 #'
