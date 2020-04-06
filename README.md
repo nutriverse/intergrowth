@@ -11,6 +11,8 @@ maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www
 status](https://travis-ci.org/nutriverse/intergrowth.svg?branch=master)](https://travis-ci.org/nutriverse/intergrowth)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/nutriverse/intergrowth?branch=master&svg=true)](https://ci.appveyor.com/project/nutriverse/intergrowth)
+[![Codecov test
+coverage](https://codecov.io/gh/nutriverse/intergrowth/branch/master/graph/badge.svg)](https://codecov.io/gh/nutriverse/intergrowth?branch=master)
 <!-- badges: end -->
 
 The INTERGROWTH-21st Project was a multi-centre, multi-ethnic,
