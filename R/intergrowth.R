@@ -17,6 +17,7 @@
 #' @docType package
 #' @name intergrowth
 #' @keywords internal
+#' @importFrom lubridate ydm days weeks
 #'
 #
 ################################################################################
