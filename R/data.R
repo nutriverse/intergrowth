@@ -37,7 +37,7 @@
 #' }
 #'
 #' @examples
-#' crl_gestage_centiles
+#' crl_gestage_centile
 #'
 #' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
 #'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
@@ -45,7 +45,7 @@
 #'
 #
 ################################################################################
-"crl_gestage_centiles"
+"crl_gestage_centile"
 
 
 ################################################################################
@@ -73,3 +73,49 @@
 "crl_gestage_sd"
 
 
+################################################################################
+#
+#' International symphysis-fundal height standards: table of centiles of
+#' symphysis-fundal height based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age in exact weeks}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{sfh}}{Symphysis-fundal height in centimetres}
+#' }
+#'
+#' @examples
+#' sfh_gestage_centile
+#'
+#' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
+#'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
+#'     systematic review of charts. BJOG 2014, 121(5):556-5.
+#'
+#
+################################################################################
+"sfh_gestage_centile"
+
+
+################################################################################
+#
+#' International symphysis-fundal height standards: table of z-scores of
+#' symphysis-fundal height based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{gestage}}{Gestational age in exact weeks}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{sfh}}{Symphysis-fundal height in centimetres}
+#' }
+#'
+#' @examples
+#' sfh_gestage_sd
+#'
+#' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
+#'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
+#'     systematic review of charts. BJOG 2014, 121(5):556-5.
+#'
+#
+################################################################################
+"sfh_gestage_sd"

@@ -55,7 +55,7 @@ gestage_crl <- tidyr::pivot_longer(data = p, cols = "3rd_week":"97th_day",
 
 usethis::use_data(gestage_crl, overwrite = TRUE, compress = "xz")
 
-##################### Fetal size in early pregnancy (centiles) #######################
+##################### Fetal size in early pregnancy (centiles) #################
 
 pdfLink <- "https://intergrowth21.tghn.org/site_media/media/medialibrary/2017/04/GROW_Early_Preg_charts_SIZE_ct_Table.pdf"
 
@@ -89,13 +89,13 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th",
               "90th", "95th", "97th")
 
 ## create tidy format table
-crl_gestage_centiles <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
-                                    names_to = "centile",
-                                    values_to = "crl")
+crl_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                           names_to = "centile",
+                                           values_to = "crl")
 
-usethis::use_data(crl_gestage_centiles, overwrite = TRUE, compress = "xz")
+usethis::use_data(crl_gestage_centile, overwrite = TRUE, compress = "xz")
 
-##################### Fetal size in early pregnancy (z-score) #######################
+##################### Fetal size in early pregnancy (z-score) ##################
 
 pdfLink <- "https://media.tghn.org/medialibrary/2017/04/GROW_Early_Preg_charts_SIZE_zs_Table.pdf"
 
@@ -134,3 +134,49 @@ crl_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
                                       values_to = "crl")
 
 usethis::use_data(crl_gestage_sd, overwrite = TRUE, compress = "xz")
+
+##################### Symphysis-Fundal Height (centiles) #######################
+
+pdfLink <- "https://media.tghn.org/medialibrary/2019/08/GROW_SFH_ext_ct_Table_-_New.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+p <- NULL
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+sfh_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                           names_to = "centile",
+                                           values_to = "sfh")
+
+usethis::use_data(sfh_gestage_centile, overwrite = TRUE, compress = "xz")
+
+##################### Fetal size in early pregnancy (z-score) ##################
+
+pdfLink <- "https://media.tghn.org/medialibrary/2019/08/GROW_SFH_zs_Table_-_New.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][10:36]
+p <- NULL
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+sfh_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                      names_to = "sd",
+                                      values_to = "sfh")
+
+usethis::use_data(sfh_gestage_sd, overwrite = TRUE, compress = "xz")
