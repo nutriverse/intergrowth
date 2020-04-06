@@ -22,7 +22,7 @@ Calculate gestational age given crown-rump length (mm) based on ultrasound
 }
 \examples{
 
-calculate_gestage(date = "2016-12-23",
+calculate_gestage(date = "2016-23-12",
                   crl = 17)
 
 }
