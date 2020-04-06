@@ -19,6 +19,9 @@ Description: The INTERGROWTH-21st Project was a multi-centre, multi-ethnic,
     as infant health and nutrition at an individual and population level.
 License: GPL-3
 Depends: R (>= 2.10)
+Imports: 
+    lubridate
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
+
