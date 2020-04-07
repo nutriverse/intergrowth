@@ -2,8 +2,8 @@
 #
 #' Calculate symphysis-fundal height-for-gestational age z-score and centile
 #'
-#' @param gestage Gestational age in weeks and days. Format should be in
-#'   weeks+days as character values.
+#' @param gestage Gestational age. Gestational age can be provided as a string
+#'   with a format of weeks+days or as numeric of exact weeks in decimal format
 #' @param sfh Symphysis-fundal height measurement in centimetres up to 1
 #'   decimal place
 #'
@@ -20,12 +20,18 @@
 ################################################################################
 
 calculate_sfh_gestage <- function(gestage = NULL, sfh = NULL) {
-  ## Error messages
+  ## Check that gestage and sfh is not null
   if(is.null(gestage)) stop("Gestational age required to calculate z-score and centile. Try again.", call. = TRUE)
-  if(!stringr::str_detect(string = gestage, pattern = "[\\+]")) stop("Gestational age not in the right format (weeks+days as a string). Try again.", call. = TRUE)
-  ## Convert gestage to weeks in decimals
-  ga <- as.numeric(stringr::str_split(string = gestage, pattern = "[\\+]", simplify = TRUE))
-  ga <- ga[1] + (ga[2] / 7)
+  if(is.null(sfh)) stop("Symphysis-fundal height measurement required to calculate z-score and centile. Try again.", call. = TRUE)
+  ## Check if gestage is string
+  if(is.character(gestage)) {
+    if(!stringr::str_detect(string = gestage, pattern = "[\\+]")) stop("Gestational age not in the right format (weeks+days as a string). Try again.", call. = TRUE)
+    ## Convert gestage to weeks in decimals
+    ga <- as.numeric(stringr::str_split(string = gestage, pattern = "[\\+]", simplify = TRUE))
+    ga <- ga[1] + (ga[2] / 7)
+  } else {
+    ga <- gestage
+  }
   ## Calculate mean sfh for ga
   medianSFH <- 5.133374 + 0.1058353119 * (ga ^ 2) - 0.0231295 * (ga ^ 2) * log(ga)
   sdSFH <- 0.99226687 + 0.0258087 * ga
