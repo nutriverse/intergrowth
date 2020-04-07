@@ -123,8 +123,8 @@ calculate_gestage_hcfl <- function(date = Sys.Date(),
 #'   of delivery (date).
 #'
 #' @examples
-#'
 #' calculate_gestage(date = "2016-23-12", crl = 17)
+#' calculate_gestage(date = "2016-23-12", hc = 130, fl = 20)
 #'
 #' @export
 #'
@@ -136,8 +136,11 @@ calculate_gestage <- function(date = Sys.Date(),
                               hc = NULL,
                               fl = NULL) {
   ##
-  if(!is.null(crl) & crl >= 15 & crl <= 100) {
-    gestage <- calculate_gestage_crl(date = date, crl = crl)
+  if(!is.null(crl)) {
+    ##
+    if(crl >= 15 & crl <= 100) {
+      gestage <- calculate_gestage_crl(date = date, crl = crl)
+    }
     ##
     if(crl > 100) {
       gestage <- calculate_gestage_hcfl(date = date, hc = hc, fl = fl)
