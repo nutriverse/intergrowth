@@ -27,7 +27,7 @@ Calculate gestational age given crown-rump length and/or head circumference
 and femur length based on ultrasound
 }
 \examples{
-
 calculate_gestage(date = "2016-23-12", crl = 17)
+calculate_gestage(date = "2016-23-12", hc = 130, fl = 20)
 
 }
