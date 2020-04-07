@@ -18,6 +18,8 @@
 #' @name intergrowth
 #' @keywords internal
 #' @importFrom lubridate ydm days weeks
+#' @importFrom stringr str_detect str_split
+#' @importFrom stats pnorm
 #'
 #
 ################################################################################
