@@ -165,7 +165,9 @@ pdfLink <- "https://media.tghn.org/medialibrary/2019/08/GROW_SFH_zs_Table_-_New.
 temp <- pdftools::pdf_text(pdf = pdfLink)
 temp <- stringr::str_split(string = temp, pattern = "\n")
 temp <- temp[[1]][10:36]
+
 p <- NULL
+
 for(i in 1:length(temp)) {
   x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
   x <- x[x != ""]
@@ -180,3 +182,303 @@ sfh_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
                                       values_to = "sfh")
 
 usethis::use_data(sfh_gestage_sd, overwrite = TRUE, compress = "xz")
+
+########### Fetal head circumference for gestational age (centile) #############
+
+pdfLink <- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-ct_hc_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+hc_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                          names_to = "centile",
+                                          values_to = "hc")
+
+usethis::use_data(hc_gestage_centile, overwrite = TRUE, compress = "xz")
+
+########### Fetal head circumference for gestational age (z-score) #############
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-zs_hc_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+hc_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                     names_to = "sd",
+                                     values_to = "hc")
+
+usethis::use_data(hc_gestage_sd, overwrite = TRUE, compress = "xz")
+
+########### Fetal bi-parietal diameter for gestational age (centile) ###########
+
+pdfLink <- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-ct_bpd_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+bpd_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                           names_to = "centile",
+                                           values_to = "bpd")
+
+usethis::use_data(bpd_gestage_centile, overwrite = TRUE, compress = "xz")
+
+########### Fetal bi-parietal diameter for gestational age (z-score) ###########
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-zs_bpd_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+bpd_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                      names_to = "sd",
+                                      values_to = "bpd")
+
+usethis::use_data(bpd_gestage_sd, overwrite = TRUE, compress = "xz")
+
+######### Fetal abdominal circumference for gestational age (centile) ##########
+
+pdfLink <- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-ct_ac_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+ac_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                          names_to = "centile",
+                                          values_to = "ac")
+
+usethis::use_data(ac_gestage_centile, overwrite = TRUE, compress = "xz")
+
+######### Fetal abdominal circumference for gestational age (z-score) ##########
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-zs_ac_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+ac_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                     names_to = "sd",
+                                     values_to = "ac")
+
+usethis::use_data(ac_gestage_sd, overwrite = TRUE, compress = "xz")
+
+################# Femur length for gestational age (centile) ###################
+
+pdfLink <- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-ct_fl_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+fl_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                          names_to = "centile",
+                                          values_to = "fl")
+
+usethis::use_data(fl_gestage_centile, overwrite = TRUE, compress = "xz")
+
+################# Femur length for gestational age (z-score) ###################
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-zs_fl_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+fl_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                     names_to = "sd",
+                                     values_to = "fl")
+
+usethis::use_data(fl_gestage_sd, overwrite = TRUE, compress = "xz")
+
+########## Occipito-frontal diameter for gestational age (centile) #############
+
+pdfLink <- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-ct_ofd_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+ofd_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                           names_to = "centile",
+                                           values_to = "ofd")
+
+usethis::use_data(ofd_gestage_centile, overwrite = TRUE, compress = "xz")
+
+########## Occipito-frontal diameter for gestational age (z-score) #############
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/03/GROW_Fetal-zs_ofd_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+ofd_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                      names_to = "sd",
+                                      values_to = "ofd")
+
+usethis::use_data(ofd_gestage_sd, overwrite = TRUE, compress = "xz")
+
+########## Estimated fetal weight for gestational age (centile) ################
+
+pdfLink <- "https://media.tghn.org/medialibrary/2017/12/GROW_EFW_ct_Table_values.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][8:26]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+efw_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                           names_to = "centile",
+                                           values_to = "efw")
+
+usethis::use_data(efw_gestage_centile, overwrite = TRUE, compress = "xz")
+
+########## Estimated fetal weight for gestational age (z-score) ################
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/03/GROW_EFW_zs_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][9:27]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+efw_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                      names_to = "sd",
+                                      values_to = "efw")
+
+usethis::use_data(efw_gestage_sd, overwrite = TRUE, compress = "xz")
