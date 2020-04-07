@@ -20,9 +20,8 @@
 ################################################################################
 
 calculate_sfh_gestage <- function(gestage = NULL, sfh = NULL) {
-  ##
+  ## Error messages
   if(is.null(gestage)) stop("Gestational age required to calculate z-score and centile. Try again.", call. = TRUE)
-  ##
   if(!stringr::str_detect(string = gestage, pattern = "[\\+]")) stop("Gestational age not in the right format (weeks+days as a string). Try again.", call. = TRUE)
   ## Convert gestage to weeks in decimals
   ga <- as.numeric(stringr::str_split(string = gestage, pattern = "[\\+]", simplify = TRUE))
