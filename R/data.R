@@ -123,3 +123,303 @@
 #
 ################################################################################
 "sfh_gestage_sd"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of centiles of head circumference
+#' based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age in exact weeks}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{hc}}{Head circumference in millimetres}
+#' }
+#'
+#' @examples
+#' hc_gestage_centile
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"hc_gestage_centile"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of z-scores of head circumference
+#' based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{gestage}}{Gestational age in exact weeks}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{hc}}{Head circumference in millimetres}
+#' }
+#'
+#' @examples
+#' hc_gestage_sd
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"hc_gestage_sd"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of centiles of bi-parietal
+#' diameter based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age in exact weeks}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{bpd}}{Bi-parietal diameter in millimetres}
+#' }
+#'
+#' @examples
+#' bpd_gestage_centile
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"bpd_gestage_centile"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of z-scores of bi-parietal
+#' diameter based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{gestage}}{Gestational age in exact weeks}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{bpd}}{Bi-parietal diameter in millimetres}
+#' }
+#'
+#' @examples
+#' bpd_gestage_sd
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"bpd_gestage_sd"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of centiles of abdominal
+#' circumference based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age in exact weeks}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{ac}}{Abdominal circumference in millimetres}
+#' }
+#'
+#' @examples
+#' ac_gestage_centile
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"ac_gestage_centile"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of z-scores of abdominal
+#' circumference based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{gestage}}{Gestational age in exact weeks}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{ac}}{Abdominal circumference in millimetres}
+#' }
+#'
+#' @examples
+#' ac_gestage_sd
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"ac_gestage_sd"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of centiles of femur length
+#' based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age in exact weeks}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{fl}}{Femur length in millimetres}
+#' }
+#'
+#' @examples
+#' fl_gestage_centile
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"fl_gestage_centile"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of z-scores of femur length
+#' based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{gestage}}{Gestational age in exact weeks}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{fl}}{Femur length in millimetres}
+#' }
+#'
+#' @examples
+#' fl_gestage_sd
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"fl_gestage_sd"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of centiles of occipito-frontal
+#' diameter based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age in exact weeks}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{ofd}}{Occipito-frontal diameter in millimetres}
+#' }
+#'
+#' @examples
+#' ofd_gestage_centile
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"ofd_gestage_centile"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of z-scores of occipito-frontal
+#' diameter based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{gestage}}{Gestational age in exact weeks}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{ofd}}{Occipito-frontal diameter in millimetres}
+#' }
+#'
+#' @examples
+#' ofd_gestage_sd
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"ofd_gestage_sd"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of centiles of estimated fetal
+#' weight based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age in exact weeks}
+#'   \item{\code{centile}}{Centiles (3rd, 5th, 10th, 50th, 90th, 95th, 97th)}
+#'   \item{\code{efw}}{Estimated fetal weight in grams}
+#' }
+#'
+#' @examples
+#' efw_gestage_centile
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"efw_gestage_centile"
+
+
+################################################################################
+#
+#' International fetal growth standards: table of z-scores of estimated fetal
+#' weight based on gestation age in exact weeks
+#'
+#' @format A tibble with 189 rows and 3 columns:
+#' \describe{
+#'   \item{\code{gestage}}{Gestational age in exact weeks}
+#'   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+#'   \item{\code{efw}}{Estimated fetal weight in grams}
+#' }
+#'
+#' @examples
+#' efw_gestage_sd
+#'
+#' @source Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
+#'   Lambert A et al. International standards for fetal growth based on serial
+#'   ultrasound measurements: the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+#'
+#
+################################################################################
+"efw_gestage_sd"
