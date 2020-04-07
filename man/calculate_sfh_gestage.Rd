@@ -7,8 +7,8 @@
 calculate_sfh_gestage(gestage = NULL, sfh = NULL)
 }
 \arguments{
-\item{gestage}{Gestational age in weeks and days. Format should be in
-weeks+days as character values.}
+\item{gestage}{Gestational age. Gestational age can be provided as a string
+with a format of weeks+days or as numeric of exact weeks in decimal format}
 
 \item{sfh}{Symphysis-fundal height measurement in centimetres up to 1
 decimal place}
