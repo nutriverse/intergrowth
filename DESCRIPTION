@@ -20,7 +20,8 @@ Description: The INTERGROWTH-21st Project was a multi-centre, multi-ethnic,
 License: GPL-3
 Depends: R (>= 2.10)
 Imports: 
-    lubridate
+    lubridate,
+    stringr
 Suggests: 
     testthat,
     covr

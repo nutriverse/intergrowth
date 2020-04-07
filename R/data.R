@@ -88,9 +88,11 @@
 #' @examples
 #' sfh_gestage_centile
 #'
-#' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
-#'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
-#'     systematic review of charts. BJOG 2014, 121(5):556-5.
+#' @source Papageorghiou AT, Ohuma EO, Gravett MG, Lamber A, Noble JA,
+#'   Pang R et al. International standards for symphysis-fundal height based
+#'   on serial measurements from the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project: prospective cohort study in eight countries.
+#'   BMJ 2016, 355:i5662.
 #'
 #
 ################################################################################
@@ -112,9 +114,11 @@
 #' @examples
 #' sfh_gestage_sd
 #'
-#' @source Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
-#'     Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
-#'     systematic review of charts. BJOG 2014, 121(5):556-5.
+#' @source Papageorghiou AT, Ohuma EO, Gravett MG, Lamber A, Noble JA,
+#'   Pang R et al. International standards for symphysis-fundal height based
+#'   on serial measurements from the Fetal Growth Longitudinal Study of the
+#'   INTERGROWTH-21st Project: prospective cohort study in eight countries.
+#'   BMJ 2016, 355:i5662.
 #'
 #
 ################################################################################

@@ -107,7 +107,6 @@ calculate_gestage_hcfl <- function(date = Sys.Date(),
 }
 
 
-
 ################################################################################
 #
 #' Calculate gestational age given crown-rump length and/or head circumference
@@ -159,5 +158,8 @@ calculate_gestage <- function(date = Sys.Date(),
   ##
   return(gestage)
 }
+
+
+
 
 
