@@ -532,3 +532,4 @@ gwg_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
                                       values_to = "gwg")
 
 usethis::use_data(gwg_gestage_sd, overwrite = TRUE, compress = "xz")
+
