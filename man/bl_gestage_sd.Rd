@@ -12,7 +12,7 @@ A tibble with 882 rows and 5 columns:
   \item{\code{day}}{Gestational age days component}
   \item{\code{sex}}{Sex; 1 = male; 2 = female}
   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
-  \item{\code{bl}}{Birthlength in kilograms}
+  \item{\code{bl}}{Birthlength in centimetres}
 }
 }
 \source{
