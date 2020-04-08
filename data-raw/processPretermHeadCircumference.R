@@ -114,7 +114,7 @@ for(i in 1:length(temp2)) {
 ## Concatenate
 p <- data.frame(rbind(p1, p2))
 p <- data.frame(p, sex = 1)
-names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th", "sex")
+names(p) <- c("week", "day", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD", "sex")
 
 pBoys <- p
 
@@ -149,18 +149,18 @@ for(i in 1:length(temp2)) {
 ## Concatenate
 p <- data.frame(rbind(p1, p2))
 p <- data.frame(p, sex = 2)
-names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th", "sex")
+names(p) <- c("week", "day", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD", "sex")
 
 pGirls <- p
 
 ## Concatenate boys and girls data.frame
 p <- data.frame(rbind(pBoys, pGirls))
 
-names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th", "sex")
+names(p) <- c("week", "day", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD", "sex")
 row.names(p) <- 1:nrow(p)
 
 ## create tidy format table
-hc_gestage_sd <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+hc_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
                                      names_to = "sd",
                                      values_to = "hc")
 
