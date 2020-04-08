@@ -566,7 +566,7 @@
 #'   \item{\code{day}}{Gestational age days component}
 #'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
 #'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
-#'   \item{\code{bl}}{Birthlength in kilograms}
+#'   \item{\code{bl}}{Birthlength in centimetres}
 #' }
 #'
 #' @examples
@@ -579,3 +579,55 @@
 #
 ################################################################################
 "bl_gestage_sd"
+
+
+################################################################################
+#
+#' International Newborn Size References for Very Preterm Infants: table of
+#' centiles for head circumference-for-gestational age for very preterm infants
+#'
+#' @format A tibble with 882 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
+#'   \item{\code{hc}}{Head circumference in centimetres}
+#' }
+#'
+#' @examples
+#' hc_gestage_centile
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"hc_gestage_centile"
+
+
+################################################################################
+#
+#' International Newborn Size References for Very Preterm Infants: table of
+#' z-score for head circumference-for-gestational age for very preterm infants
+#'
+#' @format A tibble with 882 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
+#'   \item{\code{hc}}{Head circumference in centimetres}
+#' }
+#'
+#' @examples
+#' hc_gestage_sd
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"hc_gestage_sd"
