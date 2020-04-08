@@ -439,7 +439,7 @@
 #' }
 #'
 #' @examples
-#' gestwt_gestage_centile
+#' gwg_gestage_centile
 #'
 #' @source Cheikh Ismail L, Bishop DC, Pang R, Ohuma EO, Kac G, Abrams B et al.
 #'   Gestational weight gain standards based on women enrolled in the Fetal
@@ -448,7 +448,7 @@
 #'
 #
 ################################################################################
-"gestwt_gestage_centile"
+"gwg_gestage_centile"
 
 
 ################################################################################
@@ -465,7 +465,7 @@
 #' }
 #'
 #' @examples
-#' gestwt_gestage_sd
+#' gwg_gestage_sd
 #'
 #' @source Cheikh Ismail L, Bishop DC, Pang R, Ohuma EO, Kac G, Abrams B et al.
 #'   Gestational weight gain standards based on women enrolled in the Fetal
@@ -474,4 +474,4 @@
 #'
 #
 ################################################################################
-"gestwt_gestage_sd"
+"gwg_gestage_sd"

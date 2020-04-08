@@ -502,11 +502,11 @@ for(i in 1:length(temp)) {
 names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
 
 ## create tidy format table
-gestwt_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
-                                              names_to = "centile",
-                                              values_to = "gestwt")
+gwg_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                           names_to = "centile",
+                                           values_to = "gwg")
 
-usethis::use_data(gestwt_gestage_centile, overwrite = TRUE, compress = "xz")
+usethis::use_data(gwg_gestage_centile, overwrite = TRUE, compress = "xz")
 
 ########## Gestational weight gain for gestational age (z-score) ###############
 
@@ -527,8 +527,8 @@ for(i in 1:length(temp)) {
 names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
 
 ## create tidy format table
-gestwt_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
-                                         names_to = "sd",
-                                         values_to = "gestwt")
+gwg_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                      names_to = "sd",
+                                      values_to = "gwg")
 
-usethis::use_data(gestwt_gestage_sd, overwrite = TRUE, compress = "xz")
+usethis::use_data(gwg_gestage_sd, overwrite = TRUE, compress = "xz")
