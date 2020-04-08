@@ -224,3 +224,101 @@ calculate_ofd_gestage <- function(gestage = NULL, ofd = NULL) {
   ##
   return(ofdga)
 }
+
+
+################################################################################
+#
+#' Calculate estimated fetal weight given abdominal circumference and head
+#' circumference
+#'
+#' @param ac Abdominal circumference in centimetres. Use measurements made
+#'   between 22+0 and 40+0 gestational weeks only.
+#' @param hc Head circumference in centimetres. Use measurements made between
+#'   22+0 and 40+0 gestational weeks only.
+#'
+#' @return Estimated fetal weight in grams.
+#'
+#' @examples
+#' calculate_efw(ac = 55, hc = 90)
+#'
+#' @export
+#
+################################################################################
+
+calculate_efw <- function(ac = NULL, hc = NULL) {
+  ## Check that ac and hc are not NULL
+  if(is.null(ac) & !is.null(hc)) stop("Abdominal circumference is required to calculate estimated fetal weight. Try again.", call. = TRUE)
+  if(is.null(hc) & !is.null(ac)) stop("Head circumference is required to calculate estimated fetal weight. Try again.", call. = TRUE)
+  if(is.null(ac) & is.null(hc)) stop("Abdominal circumference and head circumference are required to calculate estimated fetal weight. Try again.", call. = TRUE)
+  ## Calculate efw
+  efw <- exp(5.084820 - 54.06633 * (ac / 100) ^ 3 - 95.80076 * (ac / 100) ^ 3 * log(ac / 100) + 3.136370 * (hc / 100))
+  ## Return efw
+  return(efw)
+}
+
+
+################################################################################
+#
+#' Calculate estimated fetal weight for gestational age centiles and z-scores
+#'
+#' @param gestage Gestational age. Gestational age can be provided as a string
+#'   with a format of weeks+days or as numeric of exact weeks in decimal format
+#' @param ac Abdominal circumference in centimetres
+#' @param hc Head circumference in centimetres
+#'
+#' @return A list of 6 elements containing 1) estimated fetal weight in grams
+#'   based on abdominal circumference and head circumference; 2) skewness of
+#'   gestational age; 3) mean gestational age; 4) coefficient of variation of
+#'   gestational age; 5) estimated fetal weight-for-gestational age z-score;
+#'   and, 6) estimated fetal weight-for-gestational age centile.
+#'
+#' @examples
+#' calculate_efw_gestage(gestage = "30+0", ac = 26, hc = 29)
+#'
+#' @export
+#
+################################################################################
+
+calculate_efw_gestage <- function(gestage = NULL, ac = NULL, hc = NULL) {
+  ## Check gestage and ac and hc is not null
+  if(is.null(gestage)) stop("Gestational age required to calculate z-score and centile. Try again.", call. = TRUE)
+  if(is.null(ac)) stop("Abdominal circumference is required to calculate estimated fetal weight. Try again.", call. = TRUE)
+  if(is.null(hc)) stop("Head circumference is required to calculate estimated fetal weight. Try again.", call. = TRUE)
+  ## Check if gestage is string or numeric
+  if(is.character(gestage)) {
+    if(!stringr::str_detect(string = gestage, pattern = "[\\+]")) stop("Gestational age not in the right format (weeks+days as a string). Try again.", call. = TRUE)
+    ## Convert gestage to weeks in decimals
+    ga <- as.numeric(stringr::str_split(string = gestage, pattern = "[\\+]", simplify = TRUE))
+    ga <- ga[1] + (ga[2] / 7)
+  } else {
+    ga <- gestage
+  }
+  ## Calculate efw
+  efw <- calculate_efw(ac = ac, hc = hc)
+  ## Calculate skewness
+  skewGA <- -4.257629 - 2162.234 * (ga ^ -2) + 0.0002301829 * (ga ^ 3)
+  ## Calculate mean
+  meanGA <- 4.956737 + 0.0005019687 * (ga ^ 3) - 0.0001227065 * (ga ^ 3) * log(ga)
+  ## Calculate coefficient of variation
+  covGA <- (10 ^ -4) * (-6.997171 + 0.057559 * (ga ^ 3) - 0.01493946 * (ga ^ 3) * log(ga))
+  ## Calculate z-score
+  if(skewGA == 0) {
+    zscore <- (covGA ^ -1) * log(log(efw) / meanGA)
+  } else {
+    zscore <- ((covGA * skewGA) ^ -1) * (((log(efw) / meanGA) ^ skewGA) - 1)
+  }
+  ## Calculate centile
+  centile <- pnorm(q = zscore, mean = 0, sd = 1)
+  ## Concatenate results
+  efwga <- list(efw, skewGA, meanGA, covGA, zscore, centile)
+  ## Rename list elements
+  names(efwga) <- c("Estimated fetal weight (grams)",
+                    "Skewness",
+                    "Mean",
+                    "Coefficient of variation",
+                    "z-score",
+                    "centile")
+  ## Return efwga
+  return(efwga)
+}
+
