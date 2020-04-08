@@ -1,6 +1,6 @@
-################# Birthlength for gestational age (centile) ####################
+################# Birthweight for gestational age (centile) ####################
 
-pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-ct-boys_lt_Table.pdf"
+pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-ct-boys_bw_Table.pdf"
 
 tempBoys <- pdftools::pdf_text(pdf = pdfLinkBoys)
 tempBoys <- stringr::str_split(string = tempBoys, pattern = "\n")
@@ -35,7 +35,7 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th
 pBoys <- p
 
 ##
-pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-ct-girls_lt_Table.pdf"
+pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-ct-girls_bw_Table.pdf"
 
 tempGirls <- pdftools::pdf_text(pdf = pdfLinkGirls)
 tempGirls <- stringr::str_split(string = tempGirls, pattern = "\n")
@@ -76,15 +76,15 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th
 row.names(p) <- 1:nrow(p)
 
 ## create tidy format table
-bl_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+bw_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
                                           names_to = "centile",
-                                          values_to = "bl")
+                                          values_to = "bw")
 
-usethis::use_data(bl_gestage_centile, overwrite = TRUE, compress = "xz")
+usethis::use_data(bw_gestage_centile, overwrite = TRUE, compress = "xz")
 
-################# Birthlength for gestational age (z-score) ####################
+################# Birthweight for gestational age (z-score) ####################
 
-pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-zs-boys_lt_Table.pdf"
+pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-zs-boys_bw_Table.pdf"
 
 tempBoys <- pdftools::pdf_text(pdf = pdfLinkBoys)
 tempBoys <- stringr::str_split(string = tempBoys, pattern = "\n")
@@ -119,7 +119,7 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th
 pBoys <- p
 
 ##
-pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-zs-girls_lt_Table.pdf"
+pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-zs-girls_bw_Table.pdf"
 
 tempGirls <- pdftools::pdf_text(pdf = pdfLinkGirls)
 tempGirls <- stringr::str_split(string = tempGirls, pattern = "\n")
@@ -160,8 +160,8 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th
 row.names(p) <- 1:nrow(p)
 
 ## create tidy format table
-bl_gestage_sd <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+bw_gestage_sd <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
                                      names_to = "sd",
-                                     values_to = "bl")
+                                     values_to = "bw")
 
-usethis::use_data(bl_gestage_sd, overwrite = TRUE, compress = "xz")
+usethis::use_data(bw_gestage_sd, overwrite = TRUE, compress = "xz")
