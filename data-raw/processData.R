@@ -482,3 +482,53 @@ efw_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
                                       values_to = "efw")
 
 usethis::use_data(efw_gestage_sd, overwrite = TRUE, compress = "xz")
+
+########## Gestational weight gain for gestational age (centile) ###############
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/05/GROW_GWG-nw-ct_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][10:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "3rd", "5th", "10th", "50th", "90th", "95th", "97th")
+
+## create tidy format table
+gwg_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
+                                           names_to = "centile",
+                                           values_to = "gwg")
+
+usethis::use_data(gwg_gestage_centile, overwrite = TRUE, compress = "xz")
+
+########## Gestational weight gain for gestational age (z-score) ###############
+
+pdfLink<- "https://media.tghn.org/medialibrary/2017/05/GROW_GWG-nw-zs_Table.pdf"
+
+temp <- pdftools::pdf_text(pdf = pdfLink)
+temp <- stringr::str_split(string = temp, pattern = "\n")
+temp <- temp[[1]][10:35]
+
+p <- NULL
+
+for(i in 1:length(temp)) {
+  x <- stringr::str_split(string = temp[i], pattern = "[\ \\+]", simplify = TRUE)
+  x <- x[x != ""]
+  p <- data.frame(rbind(p, x))
+}
+
+names(p) <- c("gestage", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD")
+
+## create tidy format table
+gwg_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
+                                      names_to = "sd",
+                                      values_to = "gwg")
+
+usethis::use_data(gwg_gestage_sd, overwrite = TRUE, compress = "xz")
