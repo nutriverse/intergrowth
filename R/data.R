@@ -492,7 +492,7 @@
 #' }
 #'
 #' @examples
-#' bw_gestage_centile
+#' bw_gestage_pt_centile
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -500,7 +500,7 @@
 #'
 #
 ################################################################################
-"bw_gestage_centile"
+"bw_gestage_pt_centile"
 
 
 ################################################################################
@@ -518,7 +518,7 @@
 #' }
 #'
 #' @examples
-#' bw_gestage_sd
+#' bw_gestage_pt_sd
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -526,7 +526,7 @@
 #'
 #
 ################################################################################
-"bw_gestage_sd"
+"bw_gestage_pt_sd"
 
 
 ################################################################################
@@ -544,7 +544,7 @@
 #' }
 #'
 #' @examples
-#' bl_gestage_centile
+#' bl_gestage_pt_centile
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -552,7 +552,7 @@
 #'
 #
 ################################################################################
-"bl_gestage_centile"
+"bl_gestage_pt_centile"
 
 
 ################################################################################
@@ -570,7 +570,7 @@
 #' }
 #'
 #' @examples
-#' bl_gestage_sd
+#' bl_gestage_pt_sd
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -578,7 +578,7 @@
 #'
 #
 ################################################################################
-"bl_gestage_sd"
+"bl_gestage_pt_sd"
 
 
 ################################################################################
@@ -596,7 +596,7 @@
 #' }
 #'
 #' @examples
-#' hc_gestage_centile
+#' hc_gestage_pt_centile
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -604,7 +604,7 @@
 #'
 #
 ################################################################################
-"hc_gestage_centile"
+"hc_gestage_pt_centile"
 
 
 ################################################################################
@@ -622,7 +622,7 @@
 #' }
 #'
 #' @examples
-#' hc_gestage_sd
+#' hc_gestage_pt_sd
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -630,7 +630,7 @@
 #'
 #
 ################################################################################
-"hc_gestage_sd"
+"hc_gestage_pt_sd"
 
 
 ################################################################################
@@ -648,7 +648,7 @@
 #' }
 #'
 #' @examples
-#' wlr_gestage_centile
+#' wlr_gestage_pt_centile
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -656,7 +656,7 @@
 #'
 #
 ################################################################################
-"wlr_gestage_centile"
+"wlr_gestage_pt_centile"
 
 
 ################################################################################
@@ -674,7 +674,7 @@
 #' }
 #'
 #' @examples
-#' wlr_gestage_sd
+#' wlr_gestage_pt_sd
 #'
 #' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
 #'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
@@ -682,4 +682,212 @@
 #'
 #
 ################################################################################
-"wlr_gestage_sd"
+"wlr_gestage_pt_sd"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of centiles for
+#' birthweight-for-gestational age for infants
+#'
+#' @format A tibble with 980 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
+#'   \item{\code{bw}}{Birthweight in kilograms}
+#' }
+#'
+#' @examples
+#' bw_gestage_term_centile
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"bw_gestage_term_centile"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of z-score for
+#' birthweight-for-gestational age for infants
+#'
+#' @format A tibble with 980 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
+#'   \item{\code{bw}}{Birthweight in kilograms}
+#' }
+#'
+#' @examples
+#' bw_gestage_term_sd
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"bw_gestage_term_sd"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of centiles for
+#' birthlength-for-gestational age for infants
+#'
+#' @format A tibble with 980 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
+#'   \item{\code{bl}}{Birthlength in centimetres}
+#' }
+#'
+#' @examples
+#' bl_gestage_term_centile
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"bl_gestage_term_centile"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of z-score for
+#' birthlength-for-gestational age for infants
+#'
+#' @format A tibble with 980 and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
+#'   \item{\code{bl}}{Birthlength in centimetres}
+#' }
+#'
+#' @examples
+#' bl_gestage_term_sd
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"bl_gestage_term_sd"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of centiles for head
+#' circumference-for-gestational age for infants
+#'
+#' @format A tibble with 980 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
+#'   \item{\code{hc}}{Head circumference in centimetres}
+#' }
+#'
+#' @examples
+#' hc_gestage_term_centile
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"hc_gestage_term_centile"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of z-score for head
+#' circumference-for-gestational age for infants
+#'
+#' @format A tibble with 980 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
+#'   \item{\code{hc}}{Head circumference in centimetres}
+#' }
+#'
+#' @examples
+#' hc_gestage_term_sd
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"hc_gestage_term_sd"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of centiles for
+#' weight-length ratio-for-gestational age for infants
+#'
+#' @format A tibble with 980 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
+#'   \item{\code{wlr}}{Weight-length ratio in kilograms/metres}
+#' }
+#'
+#' @examples
+#' wlr_gestage_term_centile
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"wlr_gestage_term_centile"
+
+
+################################################################################
+#
+#' International Newborn Size Standards: table of z-score for
+#' weight-length ratio-for-gestational age for infants
+#'
+#' @format A tibble with 980 rows and 5 columns:
+#' \describe{
+#'   \item{\code{week}}{Gestational age weeks component}
+#'   \item{\code{day}}{Gestational age days component}
+#'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
+#'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
+#'   \item{\code{wlr}}{Weight-length ratio in kilogram/metre}
+#' }
+#'
+#' @examples
+#' wlr_gestage_term_sd
+#'
+#' @source Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
+#'   Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+#'   charts. Lancet 2016, 387(10021):844-45.
+#'
+#
+################################################################################
+"wlr_gestage_term_sd"

@@ -12,41 +12,21 @@ A tibble with 189 rows and 3 columns:
   \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
   \item{\code{hc}}{Head circumference in millimetres}
 }
-
-A tibble with 882 rows and 5 columns:
-\describe{
-  \item{\code{week}}{Gestational age weeks component}
-  \item{\code{day}}{Gestational age days component}
-  \item{\code{sex}}{Sex; 1 = male; 2 = female}
-  \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
-  \item{\code{hc}}{Head circumference in centimetres}
-}
 }
 \source{
 Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
   Lambert A et al. International standards for fetal growth based on serial
   ultrasound measurements: the Fetal Growth Longitudinal Study of the
   INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
-
-Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
-  Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
-  charts. Lancet 2016, 387(10021):844-45.
 }
 \usage{
-hc_gestage_sd
-
 hc_gestage_sd
 }
 \description{
 International fetal growth standards: table of z-scores of head circumference
 based on gestation age in exact weeks
-
-International Newborn Size References for Very Preterm Infants: table of
-z-score for head circumference-for-gestational age for very preterm infants
 }
 \examples{
-hc_gestage_sd
-
 hc_gestage_sd
 
 }
