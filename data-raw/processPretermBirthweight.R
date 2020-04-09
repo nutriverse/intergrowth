@@ -1,3 +1,10 @@
+## Libraries
+
+library(pdftools)
+library(stringr)
+
+options(stringsAsFactors = FALSE)
+
 ################# Birthweight for gestational age (centile) ####################
 
 pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-ct-boys_bw_Table.pdf"
@@ -76,11 +83,12 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th
 row.names(p) <- 1:nrow(p)
 
 ## create tidy format table
-bw_gestage_centile <- tidyr::pivot_longer(data = p, cols = "3rd":"97th",
-                                          names_to = "centile",
-                                          values_to = "bw")
+bw_gestage_pt_centile <- tidyr::pivot_longer(data = p,
+                                             cols = "3rd":"97th",
+                                             names_to = "centile",
+                                             values_to = "bw")
 
-usethis::use_data(bw_gestage_centile, overwrite = TRUE, compress = "xz")
+usethis::use_data(bw_gestage_pt_centile, overwrite = TRUE, compress = "xz")
 
 ################# Birthweight for gestational age (z-score) ####################
 
@@ -160,8 +168,9 @@ names(p) <- c("week", "day", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD", "
 row.names(p) <- 1:nrow(p)
 
 ## create tidy format table
-bw_gestage_sd <- tidyr::pivot_longer(data = p, cols = "-3SD":"3SD",
-                                     names_to = "sd",
-                                     values_to = "bw")
+bw_gestage_pt_sd <- tidyr::pivot_longer(data = p,
+                                        cols = "-3SD":"3SD",
+                                        names_to = "sd",
+                                        values_to = "bw")
 
-usethis::use_data(bw_gestage_sd, overwrite = TRUE, compress = "xz")
+usethis::use_data(bw_gestage_pt_sd, overwrite = TRUE, compress = "xz")

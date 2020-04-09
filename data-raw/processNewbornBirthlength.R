@@ -7,13 +7,13 @@ options(stringsAsFactors = FALSE)
 
 ################# Birthlength for gestational age (centile) ####################
 
-pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-ct-boys_lt_Table.pdf"
+pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/03/GROW_Newborn-ct-boys_lt_Table.pdf"
 
 tempBoys <- pdftools::pdf_text(pdf = pdfLinkBoys)
 tempBoys <- stringr::str_split(string = tempBoys, pattern = "\n")
 
 ## Page 1
-temp1 <- tempBoys[[1]][10:42]
+temp1 <- tempBoys[[1]][8:42]
 
 p1 <- NULL
 
@@ -24,7 +24,7 @@ for(i in 1:length(temp1)) {
 }
 
 ## Page 2
-temp2 <- tempBoys[[2]][10:39]
+temp2 <- tempBoys[[2]][8:42]
 
 p2 <- NULL
 
@@ -42,13 +42,13 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th
 pBoys <- p
 
 ##
-pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-ct-girls_lt_Table.pdf"
+pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/03/GROW_Newborn-ct-girls_lt_Table.pdf"
 
 tempGirls <- pdftools::pdf_text(pdf = pdfLinkGirls)
 tempGirls <- stringr::str_split(string = tempGirls, pattern = "\n")
 
 ## Page 1
-temp1 <- tempGirls[[1]][10:42]
+temp1 <- tempGirls[[1]][8:42]
 
 p1 <- NULL
 
@@ -59,7 +59,7 @@ for(i in 1:length(temp1)) {
 }
 
 ## Page 2
-temp2 <- tempGirls[[2]][10:39]
+temp2 <- tempGirls[[2]][8:42]
 
 p2 <- NULL
 
@@ -83,22 +83,22 @@ names(p) <- c("week", "day", "3rd", "5th", "10th", "50th", "90th", "95th", "97th
 row.names(p) <- 1:nrow(p)
 
 ## create tidy format table
-bl_gestage_pt_centile <- tidyr::pivot_longer(data = p,
-                                             cols = "3rd":"97th",
-                                             names_to = "centile",
-                                             values_to = "bl")
+bl_gestage_term_centile <- tidyr::pivot_longer(data = p,
+                                               cols = "3rd":"97th",
+                                               names_to = "centile",
+                                               values_to = "bl")
 
-usethis::use_data(bl_gestage_pt_centile, overwrite = TRUE, compress = "xz")
+usethis::use_data(bl_gestage_term_centile, overwrite = TRUE, compress = "xz")
 
 ################# Birthlength for gestational age (z-score) ####################
 
-pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-zs-boys_lt_Table.pdf"
+pdfLinkBoys<- "https://media.tghn.org/medialibrary/2017/03/GROW_Newborn-zs-boys_lt_Table.pdf"
 
 tempBoys <- pdftools::pdf_text(pdf = pdfLinkBoys)
 tempBoys <- stringr::str_split(string = tempBoys, pattern = "\n")
 
 ## Page 1
-temp1 <- tempBoys[[1]][9:41]
+temp1 <- tempBoys[[1]][8:42]
 
 p1 <- NULL
 
@@ -109,7 +109,7 @@ for(i in 1:length(temp1)) {
 }
 
 ## Page 2
-temp2 <- tempBoys[[2]][9:38]
+temp2 <- tempBoys[[2]][8:42]
 
 p2 <- NULL
 
@@ -127,13 +127,13 @@ names(p) <- c("week", "day", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD", "
 pBoys <- p
 
 ##
-pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/04/GROW_VeryPreterm-zs-girls_lt_Table.pdf"
+pdfLinkGirls<- "https://media.tghn.org/medialibrary/2017/03/GROW_Newborn-zs-girls_lt_Table.pdf"
 
 tempGirls <- pdftools::pdf_text(pdf = pdfLinkGirls)
 tempGirls <- stringr::str_split(string = tempGirls, pattern = "\n")
 
 ## Page 1
-temp1 <- tempGirls[[1]][9:41]
+temp1 <- tempGirls[[1]][8:42]
 
 p1 <- NULL
 
@@ -144,7 +144,7 @@ for(i in 1:length(temp1)) {
 }
 
 ## Page 2
-temp2 <- tempGirls[[2]][9:38]
+temp2 <- tempGirls[[2]][8:42]
 
 p2 <- NULL
 
@@ -168,9 +168,9 @@ names(p) <- c("week", "day", "-3SD", "-2SD", "-1SD", "0", "1SD", "2SD", "3SD", "
 row.names(p) <- 1:nrow(p)
 
 ## create tidy format table
-bl_gestage_pt_sd <- tidyr::pivot_longer(data = p,
-                                        cols = "-3SD":"3SD",
-                                        names_to = "sd",
-                                        values_to = "bl")
+bl_gestage_term_sd <- tidyr::pivot_longer(data = p,
+                                          cols = "-3SD":"3SD",
+                                          names_to = "sd",
+                                          values_to = "bl")
 
-usethis::use_data(bl_gestage_pt_sd, overwrite = TRUE, compress = "xz")
+usethis::use_data(bl_gestage_term_sd, overwrite = TRUE, compress = "xz")
