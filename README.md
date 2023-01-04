@@ -15,6 +15,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![Codecov test
 coverage](https://codecov.io/gh/nutriverse/intergrowth/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nutriverse/intergrowth?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/nutriverse/intergrowth/badge)](https://www.codefactor.io/repository/github/nutriverse/intergrowth)
+[![DOI](https://zenodo.org/badge/134933889.svg)](https://zenodo.org/badge/latestdoi/134933889)
 <!-- badges: end -->
 
 The INTERGROWTH-21st Project is a multi-centre, multi-ethnic,
@@ -73,7 +74,7 @@ citation("intergrowth")
 #> 
 #>   Ernest Guevarra (2023). intergrowth: An R Implementation of the
 #>   INTERGROWTH-21st Standards and Tools R package version 0.0.0.9001 URL
-#>   https://nutriverse.io/intergrowth/
+#>   https://nutriverse.io/intergrowth/ DOI 10.5281/zenodo.7504870
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -83,6 +84,7 @@ citation("intergrowth")
 #>     year = {2023},
 #>     note = {R package version 0.0.0.9001},
 #>     url = {https://nutriverse.io/intergrowth/},
+#>     doi = {10.5281/zenodo.7504870},
 #>   }
 ```
 
