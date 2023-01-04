@@ -14,8 +14,8 @@ with a format of weeks+days or as numeric of exact weeks in decimal format}
 }
 \value{
 A list of 2 elements containing 1) abdominal circumference-
-  for-gestational age z-score; and, 2) abdominal circumference-
-  for-gestational age centile.
+for-gestational age z-score; and, 2) abdominal circumference-
+for-gestational age centile.
 }
 \description{
 Calculate abdominal circumference for gestational age centiles and z-scores

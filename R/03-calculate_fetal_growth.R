@@ -53,7 +53,7 @@ calculate_hc_gestage <- function(gestage = NULL, hc = NULL) {
 #'
 #' @return A list of 2 elements containing 1) bi-parietal
 #'   diameter-for-gestational age z-score; and, 2) bi-parietal
-#'   diamater-for-gestational age centile.
+#'   diameter-for-gestational age centile.
 #'
 #' @examples
 #' calculate_bpd_gestage(gestage = "78+0", bpd = 20)

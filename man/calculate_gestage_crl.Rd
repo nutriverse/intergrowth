@@ -8,14 +8,14 @@ calculate_gestage_crl(date = Sys.Date(), crl = NULL)
 }
 \arguments{
 \item{date}{Date when measurement/s was/were taken. Date should be provided
-in <YYYY-DD-MM> format. Defaults to current date.}
+in \if{html}{\out{<YYYY-DD-MM>}} format. Defaults to current date.}
 
 \item{crl}{Crown-rump length measurement in millimetres.}
 }
 \value{
-A list of 3 elements containing 1) gestional age in weeks (numeric);
-  2) gestational age in weeks and days (character); and, 3) expected date
-  of delivery (date).
+A list of 3 elements containing 1) gestational age in weeks (numeric);
+2) gestational age in weeks and days (character); and, 3) expected date
+of delivery (date).
 }
 \description{
 Calculate gestational age given crown-rump length (mm) based on ultrasound

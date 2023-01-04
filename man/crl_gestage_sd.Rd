@@ -8,16 +8,16 @@ crown-rump length based on gestation age in weeks and days}
 \format{
 A tibble with 336 rows and 4 columns:
 \describe{
-  \item{\code{week}}{Gestational age - weeks}
-  \item{\code{day}}{Gestation age - days}
-  \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
-  \item{\code{crl}}{Crown-rump length in millimetres}
+\item{\code{week}}{Gestational age - weeks}
+\item{\code{day}}{Gestation age - days}
+\item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+\item{\code{crl}}{Crown-rump length in millimetres}
 }
 }
 \source{
 Napolitano R, Dhami J, Ohuma EO, Ioannou C, Conde-Agudelo A,
-    Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
-    systematic review of charts. BJOG 2014, 121(5):556-5.
+Kennedy SH et al. Pregnancy dating by fetal crown-rump length: a
+systematic review of charts. BJOG 2014, 121(5):556-5.
 }
 \usage{
 crl_gestage_sd

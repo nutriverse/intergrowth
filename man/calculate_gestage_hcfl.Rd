@@ -9,16 +9,16 @@ calculate_gestage_hcfl(date = Sys.Date(), hc = NULL, fl = NULL)
 }
 \arguments{
 \item{date}{Date when measurement/s was/were taken. Date should be provided
-in <YYYY-DD-MM> format. Defaults to current date.}
+in \if{html}{\out{<YYYY-DD-MM>}} format. Defaults to current date.}
 
 \item{hc}{Head circumference measurement in millimetres.}
 
 \item{fl}{Femur length measurement in millimetres.}
 }
 \value{
-A list of 3 elements containing 1) gestional age in weeks (numeric);
-  2) gestational age in weeks and days (character); and, 3) expected date
-  of delivery (date).
+A list of 3 elements containing 1) gestational age in weeks (numeric);
+2) gestational age in weeks and days (character); and, 3) expected date
+of delivery (date).
 }
 \description{
 Calculate gestational age given head circumference (mm) and/or femur

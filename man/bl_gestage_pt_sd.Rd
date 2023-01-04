@@ -4,28 +4,28 @@
 \name{bl_gestage_pt_sd}
 \alias{bl_gestage_pt_sd}
 \title{International Newborn Size References for Very Preterm Infants: table of
-z-score for birthlength-for-gestational age for very preterm infants}
+z-score for birth length-for-gestational age for very preterm infants}
 \format{
 A tibble with 882 rows and 5 columns:
 \describe{
-  \item{\code{week}}{Gestational age weeks component}
-  \item{\code{day}}{Gestational age days component}
-  \item{\code{sex}}{Sex; 1 = male; 2 = female}
-  \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
-  \item{\code{bl}}{Birthlength in centimetres}
+\item{\code{week}}{Gestational age weeks component}
+\item{\code{day}}{Gestational age days component}
+\item{\code{sex}}{Sex; 1 = male; 2 = female}
+\item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
+\item{\code{bl}}{Birth length in centimetres}
 }
 }
 \source{
 Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
-  Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
-  charts. Lancet 2016, 387(10021):844-45.
+Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+charts. Lancet 2016, 387(10021):844-45.
 }
 \usage{
 bl_gestage_pt_sd
 }
 \description{
 International Newborn Size References for Very Preterm Infants: table of
-z-score for birthlength-for-gestational age for very preterm infants
+z-score for birth length-for-gestational age for very preterm infants
 }
 \examples{
 bl_gestage_pt_sd

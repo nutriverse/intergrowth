@@ -14,8 +14,8 @@ with a format of weeks+days or as numeric of exact weeks in decimal format}
 }
 \value{
 A list of 2 elements containing 1) bi-parietal
-  diameter-for-gestational age z-score; and, 2) bi-parietal
-  diamater-for-gestational age centile.
+diameter-for-gestational age z-score; and, 2) bi-parietal
+diameter-for-gestational age centile.
 }
 \description{
 Calculate bi-parietal diameter for gestational age centiles and z-scores

@@ -8,16 +8,16 @@ based on gestation age in exact weeks}
 \format{
 A tibble with 189 rows and 3 columns:
 \describe{
-  \item{\code{gestage}}{Gestational age in exact weeks}
-  \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
-  \item{\code{fl}}{Femur length in millimetres}
+\item{\code{gestage}}{Gestational age in exact weeks}
+\item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+\item{\code{fl}}{Femur length in millimetres}
 }
 }
 \source{
 Papageorghiou AT, Ohuma EO, Altman DG, Todros T, Cheikh Ismail L,
-  Lambert A et al. International standards for fetal growth based on serial
-  ultrasound measurements: the Fetal Growth Longitudinal Study of the
-  INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
+Lambert A et al. International standards for fetal growth based on serial
+ultrasound measurements: the Fetal Growth Longitudinal Study of the
+INTERGROWTH-21st Project. Lancet 2014, 384(9946):869-79.
 }
 \usage{
 fl_gestage_sd

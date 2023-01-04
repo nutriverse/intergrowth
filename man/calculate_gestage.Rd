@@ -15,12 +15,12 @@ date.}
 
 \item{hc}{Head circumference measurement in millimetres}
 
-\item{fl}{Femuer length measurement in millimetres}
+\item{fl}{Femur length measurement in millimetres}
 }
 \value{
-A list of 3 elements containing 1) gestional age in weeks (numeric);
-  2) gestational age in weeks and days (character); and, 3) expected date
-  of delivery (date).
+A list of 3 elements containing 1) gestational age in weeks (numeric);
+2) gestational age in weeks and days (character); and, 3) expected date
+of delivery (date).
 }
 \description{
 Calculate gestational age given crown-rump length and/or head circumference

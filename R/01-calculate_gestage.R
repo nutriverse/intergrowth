@@ -6,7 +6,7 @@
 #'   in <YYYY-DD-MM> format. Defaults to current date.
 #' @param crl Crown-rump length measurement in millimetres.
 #'
-#' @return A list of 3 elements containing 1) gestional age in weeks (numeric);
+#' @return A list of 3 elements containing 1) gestational age in weeks (numeric);
 #'   2) gestational age in weeks and days (character); and, 3) expected date
 #'   of delivery (date).
 #'
@@ -60,7 +60,7 @@ calculate_gestage_crl <- function(date = Sys.Date(),
 #' @param hc Head circumference measurement in millimetres.
 #' @param fl Femur length measurement in millimetres.
 #'
-#' @return A list of 3 elements containing 1) gestional age in weeks (numeric);
+#' @return A list of 3 elements containing 1) gestational age in weeks (numeric);
 #'   2) gestational age in weeks and days (character); and, 3) expected date
 #'   of delivery (date).
 #'
@@ -116,9 +116,9 @@ calculate_gestage_hcfl <- function(date = Sys.Date(),
 #'   date.
 #' @param crl Crown-rump length measurement in millimetres
 #' @param hc Head circumference measurement in millimetres
-#' @param fl Femuer length measurement in millimetres
+#' @param fl Femur length measurement in millimetres
 #'
-#' @return A list of 3 elements containing 1) gestional age in weeks (numeric);
+#' @return A list of 3 elements containing 1) gestational age in weeks (numeric);
 #'   2) gestational age in weeks and days (character); and, 3) expected date
 #'   of delivery (date).
 #'

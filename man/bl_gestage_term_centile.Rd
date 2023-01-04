@@ -4,28 +4,28 @@
 \name{bl_gestage_term_centile}
 \alias{bl_gestage_term_centile}
 \title{International Newborn Size Standards: table of centiles for
-birthlength-for-gestational age for infants}
+birth length-for-gestational age for infants}
 \format{
 A tibble with 980 rows and 5 columns:
 \describe{
-  \item{\code{week}}{Gestational age weeks component}
-  \item{\code{day}}{Gestational age days component}
-  \item{\code{sex}}{Sex; 1 = male; 2 = female}
-  \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
-  \item{\code{bl}}{Birthlength in centimetres}
+\item{\code{week}}{Gestational age weeks component}
+\item{\code{day}}{Gestational age days component}
+\item{\code{sex}}{Sex; 1 = male; 2 = female}
+\item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
+\item{\code{bl}}{Birth length in centimetres}
 }
 }
 \source{
 Villar J, Giuliani F, Fenton TR, Ohuma EO, Ismail LC,
-  Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
-  charts. Lancet 2016, 387(10021):844-45.
+Kennedy SH et al. INTERGROWTH-21st very preterm size at birth reference
+charts. Lancet 2016, 387(10021):844-45.
 }
 \usage{
 bl_gestage_term_centile
 }
 \description{
 International Newborn Size Standards: table of centiles for
-birthlength-for-gestational age for infants
+birth length-for-gestational age for infants
 }
 \examples{
 bl_gestage_term_centile

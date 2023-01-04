@@ -9,16 +9,16 @@ gestational age in exact weeks}
 \format{
 A tibble with 182 rows and 3 columns:
 \describe{
-  \item{\code{week}}{Gestational age in exact weeks}
-  \item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
-  \item{\code{gestwt}}{Gestational weight gain in kilograms}
+\item{\code{week}}{Gestational age in exact weeks}
+\item{\code{sd}}{z-scores (-3SD, -2SD, -1SD, 0, 1SD, 2SD, 3SD)}
+\item{\code{gestwt}}{Gestational weight gain in kilograms}
 }
 }
 \source{
 Cheikh Ismail L, Bishop DC, Pang R, Ohuma EO, Kac G, Abrams B et al.
-  Gestational weight gain standards based on women enrolled in the Fetal
-  Growth Longitudinal Study of the INTERGROWTH-21st Project: a prospective
-  longitudinal cohort study. BMJ 2016, 352(i):555.
+Gestational weight gain standards based on women enrolled in the Fetal
+Growth Longitudinal Study of the INTERGROWTH-21st Project: a prospective
+longitudinal cohort study. BMJ 2016, 352(i):555.
 }
 \usage{
 gwg_gestage_sd

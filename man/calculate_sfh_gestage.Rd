@@ -15,8 +15,8 @@ decimal place}
 }
 \value{
 A list of 2 elements containing 1) symphysis-fundal
-  height-for-gestational age z-score; and, 2) symphysis-fundal
-  height-for-gestational age centile.
+height-for-gestational age z-score; and, 2) symphysis-fundal
+height-for-gestational age centile.
 }
 \description{
 Calculate symphysis-fundal height-for-gestational age z-score and centile

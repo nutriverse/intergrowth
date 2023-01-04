@@ -532,7 +532,7 @@
 ################################################################################
 #
 #' International Newborn Size References for Very Preterm Infants: table of
-#' centiles for birthlength-for-gestational age for very preterm infants
+#' centiles for birth length-for-gestational age for very preterm infants
 #'
 #' @format A tibble with 882 rows and 5 columns:
 #' \describe{
@@ -540,7 +540,7 @@
 #'   \item{\code{day}}{Gestational age days component}
 #'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
 #'   \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
-#'   \item{\code{bl}}{Birthlength in centimetres}
+#'   \item{\code{bl}}{Birth length in centimetres}
 #' }
 #'
 #' @examples
@@ -558,7 +558,7 @@
 ################################################################################
 #
 #' International Newborn Size References for Very Preterm Infants: table of
-#' z-score for birthlength-for-gestational age for very preterm infants
+#' z-score for birth length-for-gestational age for very preterm infants
 #'
 #' @format A tibble with 882 rows and 5 columns:
 #' \describe{
@@ -566,7 +566,7 @@
 #'   \item{\code{day}}{Gestational age days component}
 #'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
 #'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
-#'   \item{\code{bl}}{Birthlength in centimetres}
+#'   \item{\code{bl}}{Birth length in centimetres}
 #' }
 #'
 #' @examples
@@ -740,7 +740,7 @@
 ################################################################################
 #
 #' International Newborn Size Standards: table of centiles for
-#' birthlength-for-gestational age for infants
+#' birth length-for-gestational age for infants
 #'
 #' @format A tibble with 980 rows and 5 columns:
 #' \describe{
@@ -748,7 +748,7 @@
 #'   \item{\code{day}}{Gestational age days component}
 #'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
 #'   \item{\code{centile}}{Centile - 3rd, 5th, 10th, 50th, 90th, 95th, 97th}
-#'   \item{\code{bl}}{Birthlength in centimetres}
+#'   \item{\code{bl}}{Birth length in centimetres}
 #' }
 #'
 #' @examples
@@ -766,7 +766,7 @@
 ################################################################################
 #
 #' International Newborn Size Standards: table of z-score for
-#' birthlength-for-gestational age for infants
+#' birth length-for-gestational age for infants
 #'
 #' @format A tibble with 980 and 5 columns:
 #' \describe{
@@ -774,7 +774,7 @@
 #'   \item{\code{day}}{Gestational age days component}
 #'   \item{\code{sex}}{Sex; 1 = male; 2 = female}
 #'   \item{\code{sd}}{Standard deviation (z-score): -3, -2, -1, 0, 1, 2, 3}
-#'   \item{\code{bl}}{Birthlength in centimetres}
+#'   \item{\code{bl}}{Birth length in centimetres}
 #' }
 #'
 #' @examples

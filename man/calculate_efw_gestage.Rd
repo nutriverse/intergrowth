@@ -16,10 +16,10 @@ with a format of weeks+days or as numeric of exact weeks in decimal format}
 }
 \value{
 A list of 6 elements containing 1) estimated fetal weight in grams
-  based on abdominal circumference and head circumference; 2) skewness of
-  gestational age; 3) mean gestational age; 4) coefficient of variation of
-  gestational age; 5) estimated fetal weight-for-gestational age z-score;
-  and, 6) estimated fetal weight-for-gestational age centile.
+based on abdominal circumference and head circumference; 2) skewness of
+gestational age; 3) mean gestational age; 4) coefficient of variation of
+gestational age; 5) estimated fetal weight-for-gestational age z-score;
+and, 6) estimated fetal weight-for-gestational age centile.
 }
 \description{
 Calculate estimated fetal weight for gestational age centiles and z-scores

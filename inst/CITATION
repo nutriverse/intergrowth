@@ -1,0 +1,16 @@
+citHeader("To cite intergrowth in publications use:")
+
+citEntry(
+  entry    = "Manual",
+  title    = "intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools",
+  author   = person("Ernest Guevarra"),
+  year     = "2023",
+  note     = "R package version 0.0.0.9000",
+  url      = "https://nutriverse.io/intergrowth/",
+  textVersion = paste(
+    "Ernest Guevarra (2023).",
+    "intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools",
+    "R package version 0.0.0.9000",
+    "URL https://nutriverse.io/intergrowth/"
+  )
+)

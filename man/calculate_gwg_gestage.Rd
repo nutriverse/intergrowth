@@ -17,8 +17,8 @@ first trimester of pregnancy (less than 14 weeks gestational age)}
 }
 \value{
 A list of 3 elements containing 1) gestational weight gain in
-  kilograms; 2) gestational weight gain-for-gestational age z-score; and,
-  3) gestational weight gain-for-gestational age centile.
+kilograms; 2) gestational weight gain-for-gestational age z-score; and,
+3) gestational weight gain-for-gestational age centile.
 }
 \description{
 Calculate gestational weight gain-for-gestational age z-score and centile
