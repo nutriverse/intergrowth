@@ -7,10 +7,12 @@ citEntry(
   year     = "2023",
   note     = "R package version 0.0.0.9001",
   url      = "https://nutriverse.io/intergrowth/",
+  doi      = "10.5281/zenodo.7504870",
   textVersion = paste(
     "Ernest Guevarra (2023).",
     "intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools",
     "R package version 0.0.0.9001",
-    "URL https://nutriverse.io/intergrowth/"
+    "URL https://nutriverse.io/intergrowth/",
+    "DOI 10.5281/zenodo.7504870"
   )
 )
