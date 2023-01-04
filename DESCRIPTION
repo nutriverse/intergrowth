@@ -1,7 +1,7 @@
 Package: intergrowth
 Type: Package
 Title: An R Implementation of the INTERGROWTH-21st Standards and Tools
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Ernest", "Guevarra", 
     comment = c(ORCID = "0000-0002-4887-4415"), 
     email = "ernest@guevarra.io", role = c("aut", "cre"))

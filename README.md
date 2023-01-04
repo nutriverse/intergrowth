@@ -72,7 +72,7 @@ citation("intergrowth")
 #> To cite intergrowth in publications use:
 #> 
 #>   Ernest Guevarra (2023). intergrowth: An R Implementation of the
-#>   INTERGROWTH-21st Standards and Tools R package version 0.0.0.9000 URL
+#>   INTERGROWTH-21st Standards and Tools R package version 0.0.0.9001 URL
 #>   https://nutriverse.io/intergrowth/
 #> 
 #> A BibTeX entry for LaTeX users is
@@ -81,7 +81,7 @@ citation("intergrowth")
 #>     title = {intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools},
 #>     author = {{Ernest Guevarra}},
 #>     year = {2023},
-#>     note = {R package version 0.0.0.9000},
+#>     note = {R package version 0.0.0.9001},
 #>     url = {https://nutriverse.io/intergrowth/},
 #>   }
 ```
