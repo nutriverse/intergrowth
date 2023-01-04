@@ -1,6 +1,6 @@
 ################################################################################
 #
-#' The INTERGROWTH-21st Project was a multi-centre, multi-ethnic,
+#' The INTERGROWTH-21st Project is a multi-centre, multi-ethnic,
 #' population-based project, conducted between 2009 and 2014, in eight
 #' demarcated urban areas: Pelotas, Brazil; Shunyi County, Beijing, China;
 #' Central Nagpur, India; Turin, Italy; Parklands Suburb, Nairobi, Kenya;

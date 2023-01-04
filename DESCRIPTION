@@ -5,7 +5,7 @@ Version: 0.0.0.9000
 Authors@R: person("Ernest", "Guevarra", 
     comment = c(ORCID = "0000-0002-4887-4415"), 
     email = "ernest@guevarra.io", role = c("aut", "cre"))
-Description: The INTERGROWTH-21st Project was a multi-centre, multi-ethnic, 
+Description: The INTERGROWTH-21st Project is a multi-centre, multi-ethnic, 
     population-based project, conducted between 2009 and 2014, in eight 
     demarcated urban areas: Pelotas, Brazil; Shunyi County, Beijing, China; 
     Central Nagpur, India; Turin, Italy; Parklands Suburb, Nairobi, Kenya; 
@@ -26,7 +26,9 @@ Imports:
 Suggests: 
     testthat,
     covr,
-    spelling
+    spelling,
+    knitr,
+    rmarkdown
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
@@ -34,4 +36,4 @@ RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
 URL: https://nutriverse.io/intergrowth/, https://github.com/nutriverse/intergrowth
 BugReports: https://github.com/nutriverse/intergrowth/issues
-
+VignetteBuilder: knitr

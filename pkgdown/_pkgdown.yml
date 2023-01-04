@@ -1,0 +1,106 @@
+title: intergrowth
+
+url: https://nutriverse.io/intergrowth/
+
+template:
+  bootstrap: 5
+  bootswatch: lumen
+  theme: haddock
+  ganalytics: #
+
+navbar:
+  bg: primary
+  type: light
+  structure:
+    left:  [home, intro, reference, articles, news]
+    right: [twitter, linkedin, github]
+
+  components:
+    #articles:
+    #  text: Articles
+    #  menu:
+    #  - text: "Detecting haemoglobinaemia"
+    #    href: articles/haemoglobinaemia.html
+    #  - text: "Detecting inflammation"
+    #    href: articles/inflammation.html
+    #  - text: "Detecting iron deficiency"
+    #    href: articles/iron-deficiency.html
+    #  - text: "Detecting iodine deficiency"
+    #    href: articles/iodine-deficiency.html
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: https://twitter.com/katilingban
+    linkedin:
+      icon: "fab fa-linkedin fa-lg"
+      href: https://www.linkedin.com/company/katilingban
+
+home:
+  #links:
+  #- text: Read more about haemoglobin concentrations for the diagnosis of anaemia and assessment of severity
+  #  href: https://www.who.int/vmnis/indicators/haemoglobin.pdf
+
+reference:
+  # - title: Description
+  #   contents:
+  #   - intergrowth
+
+  - title: Estimate gestational age
+    contents:
+    - calculate_gestage
+    - calculate_gestage_crl
+    - calculate_gestage_hcfl
+
+  - title: Estimate fetal weight
+    contents:
+    - calculate_efw
+
+  - title: Calculate fetal growth indices
+    contents:
+    - calculate_sfh_gestage
+    - calculate_hc_gestage
+    - calculate_bpd_gestage
+    - calculate_ac_gestage
+    - calculate_fl_gestage
+    - calculate_ofd_gestage
+    - calculate_efw_gestage
+    - calculate_gwg_gestage
+
+  - title: Datasets
+    contents:
+    - gestage_crl
+    - crl_gestage_centile
+    - crl_gestage_sd
+    - sfh_gestage_centile
+    - sfh_gestage_sd
+    - hc_gestage_centile
+    - hc_gestage_sd
+    - bpd_gestage_centile
+    - bpd_gestage_sd
+    - ac_gestage_centile
+    - ac_gestage_sd
+    - fl_gestage_centile
+    - fl_gestage_sd
+    - ofd_gestage_centile
+    - ofd_gestage_sd
+    - efw_gestage_centile
+    - efw_gestage_sd
+    - gwg_gestage_centile
+    - gwg_gestage_sd
+    - bw_gestage_pt_centile
+    - bw_gestage_pt_sd
+    - bl_gestage_pt_centile
+    - bl_gestage_pt_sd
+    - hc_gestage_pt_centile
+    - hc_gestage_pt_sd
+    - wlr_gestage_pt_centile
+    - wlr_gestage_pt_sd
+    - bw_gestage_term_centile
+    - bw_gestage_term_sd
+    - bl_gestage_term_centile
+    - bl_gestage_term_sd
+    - hc_gestage_term_centile
+    - hc_gestage_term_sd
+    - wlr_gestage_term_centile
+    - wlr_gestage_term_sd
+
+

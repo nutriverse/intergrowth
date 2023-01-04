@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools <img src="man/figures/intergrowth.png" width="200px" align="right" />
+# intergrowth: An R Implementation of the INTERGROWTH-21st Standards and Tools <img src="man/figures/logo.png" width="200px" align="right" />
 
 <!-- badges: start -->
 
@@ -10,14 +10,13 @@ has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![Codecov test
-coverage](https://codecov.io/gh/nutriverse/intergrowth/branch/main/graph/badge.svg)](https://codecov.io/gh/nutriverse/intergrowth?branch=main)
 [![R-CMD-check](https://github.com/nutriverse/intergrowth/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nutriverse/intergrowth/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/nutriverse/intergrowth/branch/main/graph/badge.svg)](https://app.codecov.io/gh/nutriverse/intergrowth?branch=main)
+[![CodeFactor](https://www.codefactor.io/repository/github/nutriverse/intergrowth/badge)](https://www.codefactor.io/repository/github/nutriverse/intergrowth)
 <!-- badges: end -->
 
-The INTERGROWTH-21st Project was a multi-centre, multi-ethnic,
+The INTERGROWTH-21st Project is a multi-centre, multi-ethnic,
 population-based project, conducted between 2009 and 2014, in eight
 demarcated urban areas: Pelotas, Brazil; Shunyi County, Beijing, China;
 Central Nagpur, India; Turin, Italy; Parklands Suburb, Nairobi, Kenya;
